@@ -1,4 +1,7 @@
 ---
+# The core version you want to use.
+drupal_core_version: "8.9.x"
+
 # The path where Drupal will be downloaded and installed.
 drupal_core_path: "/var/www/drupal"
 
