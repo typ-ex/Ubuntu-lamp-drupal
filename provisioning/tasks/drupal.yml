@@ -14,6 +14,13 @@
     recurse: true
   when: git_checkout.changed | bool
 
+- name: Ensure Drupal dependencies with Composer.
+  command: >
+    /usr/local/bin/composer install
+    chdir={{ drupal_core_path }}
+    creates={{ drupal_core_path }}/vendor/autoload.php
+  become_user: www-data
+
 - name: Install Drupal.
   command: >
     drush si -y --site-name="{{ drupal_site_name }}"
