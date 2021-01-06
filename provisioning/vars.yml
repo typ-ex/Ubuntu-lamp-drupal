@@ -10,3 +10,6 @@ domain: "drupal"
 
 # Your Drupal site name
 drupal_site_name: "Drupal test"
+
+# Drush install path
+drush_path: /opt/drush
